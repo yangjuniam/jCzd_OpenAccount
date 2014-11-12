@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Customer">
+
+	<insert id="insertAqCustomerAndResturnId">
+		insert into jys_aq_account (userCode)
+		values (null)
+		<selectKey resultType="java.lang.Integer" order="AFTER"
+			keyProperty="id">
+			SELECT LAST_INSERT_ID() AS ID
+		</selectKey>
+	</insert>
+
+	<insert id="insertAqCustomerAndReturnId">
+		INSERT INTO `jys_aq_account`
+		(
+		`userCode`,
+		`customerNo`,
+		`customerName`,
+		`papersType`,
+		`papersNum`,
+		`gender`,
+		`province`,
+		`city`,
+		`area`,
+		`tradePWD`,
+		`phonePWD`,
+		`phone`,
+		`fax`,
+		`postcode`,
+		`email`,
+		`address`,
+		`brokerageNo`,
+		`organizationNo`,
+		`IDType`,
+		`bankAcc`,
+		`checkBankCard`,
+		`realBrokerNo`
+		)
+		VALUES
+		(
+		#{userCode},
+		#{customerNo},
+		#{customerName},
+		#{papersType},
+		#{papersNum},
+		${gender},
+		#{province},
+		#{city},
+		#{area},
+		#{tradePWD},
+		#{phonePWD},
+		#{phone},
+		#{fax},
+		#{postcode},
+		#{email},
+		#{address},
+		#{brokerageNo},
+		#{organizationNo},
+		#{IDType},
+		#{bankAcc},
+		#{checkBankCard},
+		#{realBrokerNo});
+		<selectKey resultType="java.lang.Integer" order="AFTER"
+			keyProperty="id">
+			SELECT LAST_INSERT_ID() AS ID
+		</selectKey>
+	</insert>
+
+
+	<insert id="insertSimCustomerAndReturnId">
+		INSERT INTO `jys_sim_account`
+		(
+		`userCode`,
+		`customerNo`,
+		`customerName`,
+		`papersType`,
+		`papersNum`,
+		`gender`,
+		`province`,
+		`city`,
+		`area`,
+		`tradePWD`,
+		`phonePWD`,
+		`phone`,
+		`fax`,
+		`postcode`,
+		`email`,
+		`address`,
+		`brokerageNo`,
+		`organizationNo`
+		)
+		VALUES
+		(
+		#{userCode},
+		#{customerNo},
+		#{customerName},
+		#{papersType},
+		#{papersNum},
+		#{gender},
+		#{province},
+		#{city},
+		#{area},
+		#{tradePWD},
+		#{phonePWD},
+		#{phone},
+		#{fax},
+		#{postcode},
+		#{email},
+		#{address},
+		#{brokerageNo},
+		#{organizationNo});
+		<selectKey resultType="java.lang.Integer" order="AFTER"
+			keyProperty="id">
+			SELECT LAST_INSERT_ID() AS ID
+		</selectKey>
+	</insert>
+
+
+	<update id="updateAqCustomer" parameterType="customer">
+		UPDATE
+		`jys_aq_account`
+		SET `userCode` = #{userCode},
+		`customerNo` =
+		#{customerNo},
+		`customerName` = #{customerName},
+		`papersType` =
+		#{papersType},
+		`papersNum` = #{papersNum},
+		`gender` = #{gender},
+		`province` = #{province},
+		`city` = #{city},
+		`area` = #{area},
+		`tradePWD`
+		= #{tradePWD},
+		`phonePWD` = #{phonePWD},
+		`phone` = #{phone},
+		`fax` =
+		#{fax},
+		`postcode` = #{postcode},
+		`email` = #{email},
+		`address` =
+		#{address},
+		`brokerageNo` = #{brokerageNo},
+		`organizationNo` =
+		#{organizationNo},
+		`IDType` = #{IDType},
+		`bankAcc` = #{bankAcc},
+		`checkBankCard` = #{checkBankCard},
+		`recordFile` = #{recordFile}
+		WHERE
+		id=#{id}
+	</update>
+
+	<select id="checkAqLogin" parameterType="customer" resultType="int">
+		select count(1) from jys_aq_account where phone = #{phone} and
+		tradePWD = #{tradePWD}
+	</select>
+
+	<select id="checkAqExist" resultType="int">
+		select count(1) from
+		jys_aq_account where phone = #{phone}
+	</select>
+
+	<select id="checkSimLogin" parameterType="customer" resultType="int">
+		select count(1) from jys_sim_account where phone = #{phone} and
+		tradePWD = #{tradePWD}
+	</select>
+
+	<select id="checkSimExist" resultType="int">
+		select count(1) from
+		jys_sim_account where phone = #{phone}
+	</select>
+
+	<insert id="insertSimCustomerAndResturnId" parameterType="customer">
+		insert into jys_sim_account (userCode)
+		values (null)
+		<selectKey resultType="java.lang.Integer" order="AFTER"
+			keyProperty="id">
+			SELECT LAST_INSERT_ID() AS ID
+		</selectKey>
+	</insert>
+
+	<update id="updateSimCustomer" parameterType="customer">
+		UPDATE
+		`jys_sim_account`
+		SET `userCode` = #{userCode},
+		`customerNo` =
+		#{customerNo},
+		`customerName` = #{customerName},
+		`papersType` =
+		#{papersType},
+		`papersNum` = #{papersNum},
+		`gender` = #{gender},
+		`province` = #{province},
+		`city` = #{city},
+		`area` = #{area},
+		`tradePWD`
+		= #{tradePWD},
+		`phonePWD` = #{phonePWD},
+		`phone` = #{phone},
+		`fax` =
+		#{fax},
+		`postcode` = #{postcode},
+		`email` = #{email},
+		`address` =
+		#{address},
+		`brokerageNo` = #{brokerageNo},
+		`organizationNo` =
+		#{organizationNo}
+		WHERE id=#{id}
+	</update>
+
+	<update id="updateSimCustomerNo" parameterType="customer">
+		UPDATE
+		`jys_sim_account`
+		SET `customerNo` = #{customerNo}
+		WHERE id=#{id}
+	</update>
+
+	<update id="updateAqCustomerNo" parameterType="customer">
+		UPDATE
+		`jys_aq_account`
+		SET `customerNo` = #{customerNo}
+		WHERE id=#{id}
+	</update>
+
+	<select id="findAqById" resultType="customer">
+		select * from jys_aq_account
+		where userCode = #{userCode}
+	</select>
+
+	<select id="findAqCustomerByPhone" resultType="customer">
+		select * from
+		jys_aq_account where phone = #{phone}
+	</select>
+
+	<select id="findSimById" resultType="customer">
+		select * from
+		jys_sim_account where userCode = #{userCode}
+	</select>
+	
+	<select id="findSimCustomerByPhone" resultType="customer">
+		select * from
+		jys_sim_account where phone = #{phone}
+	</select>
+
+	<update id="updateSimStatus" parameterType="customer">
+		update
+		jys_sim_account set status = 1 ,openDate=now()
+		where id = #{id}
+	</update>
+
+	<update id="updateAqStatus" parameterType="customer">
+		update jys_aq_account
+		set status = 1,openDate=now()
+		where id = #{id}
+	</update>
+
+	<select id="querySimCustomer" resultType="customer"
+		parameterType="pageEntity">
+		select SQL_CALC_FOUND_ROWS * from jys_sim_account
+		<if test="extensionSql != null">
+			${extensionSql}
+		</if>
+		<if test="limitSql != null">
+			${limitSql}
+		</if>
+	</select>
+
+	<select id="queryAqCustomer" resultType="customer"
+		parameterType="pageEntity">
+		select SQL_CALC_FOUND_ROWS * from jys_aq_account
+		<if test="extensionSql != null">
+			${extensionSql}
+		</if>
+		<if test="limitSql != null">
+			${limitSql}
+		</if>
+	</select>
+
+	<select id="queryCount" resultType="int">
+		select found_rows();
+	</select>
+
+	<update id="changeAqRecommendUserCode" parameterType="customer">
+		update
+		jys_aq_account set recommendUserCode =
+		#{recommendUserCode}
+		where id =
+		#{id}
+	</update>
+</mapper>

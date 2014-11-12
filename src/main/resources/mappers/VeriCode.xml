@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="VeriCode">
+
+	<insert id="insert" parameterType="veriCode">
+		insert into sms_vericode
+		(mobilePhone,type,code)
+		values (#{mobilePhone},#{type},#{veriCode})
+	</insert>
+
+	<select id="checkCount" parameterType="veriCode" resultType="int">
+		select count(1) from
+		sms_vericode
+		where mobilePhone = #{mobilePhone} and `type` = #{type}
+		and <![CDATA[createTime > date(now())]]>
+	</select>
+
+	<select id="findLastOne" resultType="veriCode" parameterType="veriCode">
+		select mobilePhone,type,code as veriCode,createTIme,used from sms_vericode
+		where mobilePhone = #{mobilePhone} and
+		`type` = #{type} and <![CDATA[createTime > date_sub(now(),interval '15'	hour_minute) ]]>
+		order by id desc
+		limit 0,1
+	</select>
+
+	<update id="updateUsed" parameterType="veriCode">
+		update sms_vericode set
+		used = 1
+		where mobilePhone = #{mobilePhone} and veriCode = #{veriCode}
+		and `type` = #{type} and used = 0
+	</update>
+
+	<select id="checkValid" parameterType="veriCode" resultType="int">
+		select count(1) from
+		sms_vericode
+	    where mobilePhone = #{mobilePhone} and
+		`type` = #{type}
+		and code=#{veriCode} and <![CDATA[createTime > date_sub(now(),interval '15'	hour_minute) ]]>
+		order by id desc
+		limit 0,1
+	</select>
+</mapper>

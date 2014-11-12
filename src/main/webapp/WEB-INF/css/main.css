@@ -1,0 +1,489 @@
+body {
+	font-size: 12px;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.row {
+	background-color: #999;
+}
+
+.required-icon {
+	color: red;
+	font-family: Arial;
+	position: absolute;
+	top: 25%;
+	font-size: 20px;
+	padding: 0 4px;
+}
+
+.width10 {
+	width: 10px;
+}
+
+.width100 {
+	width: 100px;
+}
+
+.width130 {
+	width: 130px;
+}
+
+.width200 {
+	width: 200px;
+}
+
+.width300 {
+	width: 300px;
+}
+
+.red {
+	color: red;
+	font-weight: bold;
+}
+
+div.success,div.doing,div.failed {
+	width: 500px;
+	margin: 100px auto;
+	font-size: 14px;
+	color: green;
+}
+
+div.success a,div.doing a,div.failed a {
+	color: blue;
+	text-decoration: none;
+}
+
+div.success a:hover,div.doing a:hover,div.failed a:hover {
+	text-decoration: underline;
+}
+
+div.success strong,div.doing strong,div.failed strong {
+	margin-left: 15px;
+	font-size: 16px;
+}
+
+div.success strong {
+	color: green;
+}
+
+div.failed strong {
+	color: red;
+}
+
+div.doing strong {
+	color: orange;
+}
+
+h1.success {
+	color: green;
+	font-weight: bold;
+}
+
+h1.success:after {
+	content: "开户成功";
+}
+
+h1.failed {
+	color: red;
+	font-weight: bold;
+}
+
+h1.failed:after {
+	content: "开户失败";
+}
+
+h1.doing {
+	color: orange;
+	font-weight: bold;
+}
+
+h1.doing:after {
+	content: "开户进行中";
+}
+
+h2 {
+	font-size: 14px;
+	color: #333;
+}
+
+.comment {
+	color: #666;
+	font-size: 12px;
+}
+
+.head {
+	border-bottom: 1px solid #ccc;
+	padding: 18px 0;
+}
+
+.foot {
+	border-top: 1px solid #ccc;
+	padding: 15px 0;
+}
+
+.head .content,.foot .content {
+	width: 997px;
+	margin: 0 auto;
+}
+
+.head .content a,.foot .content a {
+	color: #333;
+	font-size: 12px;
+	margin-left: 6px;
+	margin-right: 6px;
+	text-decoration: none;
+}
+
+.head .content a:hover,.foot .content a:hover {
+	color: orange;
+}
+
+.head .content .logo {
+	background: url('/static/images/new_logo.jpg') no-repeat;
+	width: 197px;
+	height: 49px;
+}
+
+.container {
+	width: 997px;
+	margin: 0 auto 50px;
+}
+
+.container h1 {
+	color: #FF7B02;
+	font-size: 20px;
+}
+
+.container input.text,.container select {
+	height: 28px;
+	line-height: 28px;
+	font-family: "Helvetica Neue", "Helvetica", Arial, 宋体;
+	font-size: 14px;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+.container input.text,.container select {
+	padding-right: 0px;
+}
+
+.submitter {
+	line-height: 36px;
+	font-size: 14px;
+	background-color: #FF7B02;
+	color: #fff;
+	padding: 0 36px;
+	border: 0;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.center {
+	text-align: center;
+}
+
+th {
+	border: 1px solid #ccc;
+	height: 32px;
+	text-align: left;
+	background: -webkit-linear-gradient(#EBEBEB, #fff);
+	border-radius: 0 5px 5px 0;
+	padding-left: 12px;
+	font-size: 16px;
+	color: #333;
+	position: relative;
+}
+
+td {
+	padding: 8px 0;
+}
+
+.menu {
+	width: 997px;
+	margin: 25px auto;
+	height: 36px;
+}
+
+.menu .item {
+	width: 49.5%;
+	border: 1px solid #d2d2d2;
+	background-color: #fff;
+	float: left;
+}
+
+.menu .item a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	line-height: 36px;
+	font-size: 14px;
+	color: #FF7B02;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.menu .item a:hover {
+	color: #666;
+}
+
+.menu .current a:hover {
+	color: yellow;
+}
+
+.menu .current {
+	background-color: #FF7B02;
+}
+
+.menu .current a {
+	color: #fff;
+}
+
+.menu .leftItem {
+	border-radius: 5px 0 0 5px;
+}
+
+.menu .rightItem {
+	border-left: none;
+	border-radius: 0 5px 5px 0;
+}
+
+td.label {
+	text-align: right;
+	padding-right: 6px;
+	font-size: 14px;
+	width: 174px;
+}
+
+.clearfix {
+	clear: both;
+	height: 0;
+	line-height: 0;
+}
+
+.f12 {
+	font-size: 12px;
+}
+
+.agree_div {
+	padding: 8px 0;
+}
+
+.largeMenu {
+	line-height: 36px;
+	heigth: 36px;
+	font-size: 14px;
+	background-color: #FF7B02;
+	color: #fff;
+	border: 0;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+	width: 50%;
+	margin: 15px auto;
+	border-radius: 5px 5px 5px 5px;
+	display: block;
+	text-decoration: none;
+}
+
+.menuDone {
+	background-color: #fff;
+	border: 1px solid green;
+	color: green;
+}
+
+.disableMenu {
+	background-color: #ccc;
+	color: #ddd;
+}
+
+a.largeMenu:hover {
+	color: yellow;
+}
+
+.pos_rel {
+	position: absolute;
+	height: 210px;
+	width: 160px;
+	top: 65px;
+	left: 630px;
+}
+
+.pos_rel .icon1 {
+	display: block;
+	border-width: 9px 9px 9px 0;
+	border-color: transparent #000;
+	border-style: solid;
+	position: absolute;
+	left: 0;
+	top: 10px;
+	width: 0;
+	height: 0;
+}
+
+.pos_rel .square {
+	height: 210px;
+	width: 150px;
+	position: absolute;
+	left: 8px;
+	background-color: #000;
+	border-radius: 5px;
+	color: #fff;
+	padding: 10px 4px;
+	line-height: 150%;
+}
+
+.pos_rel .square p {
+	padding: 0;
+	margin: 0;
+}
+
+.pos_rel .square .important {
+	font-weight: bold;
+	padding-bottom: 8px;
+}
+
+.hide {
+	display: none;
+}
+
+.error {
+	width: 80%;
+	height: 44px;
+	line-height: 44px;
+	border-radius: 5px;
+	background-color: #eee;
+	color: red; font-size：16px;
+	font-weight: bold;
+	border: solid red 1px;
+	text-indent: 12px;
+	margin: 50px auto;
+}
+
+.success {
+	width: 80%;
+	height: 44px;
+	line-height: 44px;
+	border-radius: 5px;
+	background-color: #fff;
+	color: green; font-size：16px;
+	font-weight: bold;
+	border: solid green 1px;
+	text-indent: 12px;
+	margin: 50px auto;
+}
+
+.loginForm {
+	width: 400px;
+	margin: 50px auto;
+}
+
+.loginForm .loginTitle {
+	height: 18px;
+	color: #666;
+	font-size: 16px;
+	font-family: "宋体";
+	font-weight: bold;
+	text-indent: 12px;
+	padding: 15px 0 13px;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: left;
+	box-sizing: content-box;
+	width: auto;
+	background-color: #f7f7f7;
+	border: 1px solid #ddd;
+	border-width: 1px 1px 0 1px;
+	border-bottom: 0;
+}
+
+.loginForm .loginContent {
+	border-top: 1px solid #F2F2F2;
+	padding: 40px 20px;
+	background-color: #fff;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+}
+
+.loginForm .loginInput {
+	margin-bottom: 15px;
+	padding: 6px 10px 6px 0px;
+	border: 1px solid #ddd;
+}
+
+.loginForm .loginInput input {
+	border: 0;
+	width: 280px;
+	float: left;
+	margin-left: 4px;
+}
+
+.loginForm .icon {
+	height: 24px;
+	width: 24px;
+	display: inline-block;
+	float: left;
+	margin-left: 6px;
+}
+
+.loginForm .mobile {
+	background-image: -webkit-image-set(url(/static/images/input_icons_24.png) 1x,
+		url(/static/images/input_icons_48.png) 2x);
+	background-position: 0 -68px;
+}
+
+.loginForm .pwd {
+	background-position: 0 -147px;
+	background-image: -webkit-image-set(url(/static/images/input_icons_24.png) 1x,
+		url(/static/images/input_icons_48.png) 2x);
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+table.accountList {
+	border-collapse: collapse;
+	margin-bottom: 50px;
+}
+
+table.accountList th {
+	border: 1px solid #ccc;
+	height: 32px;
+	text-align: left;
+	background: -webkit-linear-gradient(#EBEBEB, #fff);
+	padding-left: 12px;
+	font-size: 12px;
+	font-weight: normal;
+	border-radius: 0;
+	color: #333;
+}
+
+table.accountList td {
+	border: 1px solid #ccc;
+	padding-left: 12px;
+}
+
+.search {
+	padding: 10px 0;
+}
+
+.veriCode {
+	height: 30px;
+	font-family: "Helvetica Neue", "Helvetica", Arial, 宋体;
+	font-size: 14px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+.sendStatus{
+	padding-left: 10px;
+	color: red;
+}

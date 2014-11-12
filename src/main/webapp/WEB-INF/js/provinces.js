@@ -1,0 +1,11 @@
+var provinceList = [ {provinceName:'上海'},{provinceName:'北京'},{provinceName:'安徽'},
+                    {provinceName:'福建'},{provinceName:'甘肃'},{provinceName:'广东'},
+                    {provinceName:'广西'},{provinceName:'贵州'},{provinceName:'海南'},
+                    {provinceName:'河北'},{provinceName:'河南'},{provinceName:'黑龙江'},
+                    {provinceName:'湖北'},{provinceName:'湖南'},{provinceName:'吉林'},
+                    {provinceName:'江苏'},{provinceName:'江西'},{provinceName:'辽宁'},
+                    {provinceName:'内蒙古'},{provinceName:'宁夏'},{provinceName:'青海'},
+                    {provinceName:'山东'},{provinceName:'山西'},{provinceName:'陕西'},
+                    {provinceName:'四川'},{provinceName:'天津'},{provinceName:'西藏'},
+                    {provinceName:'新疆'},{provinceName:'云南'},{provinceName:'浙江'},
+                    {provinceName:'重庆'},{provinceName:'香港'},{provinceName:'澳门'},{provinceName:'台湾'}];

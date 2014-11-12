@@ -1,0 +1,40 @@
+var cityList = [{provinceName:'北京',citys:[{cityName:'北京'}]},
+				{provinceName:'安徽',citys:[{cityName:'安庆'},{cityName:'蚌埠'},{cityName:'巢湖'},{cityName:'池州'},{cityName:'滁州'},{cityName:'阜阳'},{cityName:'淮北'},{cityName:'淮南'},{cityName:'黄山'},{cityName:'六安'},{cityName:'马鞍山'},{cityName:'宿州'},{cityName:'铜陵'},{cityName:'芜湖'},{cityName:'宣城'},{cityName:'亳州'}]},
+				{provinceName:'福建',citys:[{cityName:'福州'},{cityName:'龙岩'},{cityName:'南平'},{cityName:'宁德'},{cityName:'莆田'},{cityName:'泉州'},{cityName:'三明'},{cityName:'厦门'},{cityName:'漳州'}]},
+				{provinceName:'甘肃',citys:[{cityName:'兰州'},{cityName:'白银'},{cityName:'定西'},{cityName:'甘南'},{cityName:'嘉峪关'},{cityName:'金昌'},{cityName:'酒泉'},{cityName:'临夏'},{cityName:'陇南'},{cityName:'平凉'},{cityName:'庆阳'},{cityName:'天水'},{cityName:'武威'},{cityName:'张掖'}]},
+				{provinceName:'广东',citys:[{cityName:'广州'},{cityName:'深圳'},{cityName:'潮州'},{cityName:'东莞'},{cityName:'佛山'},{cityName:'河源'},{cityName:'惠州'},{cityName:'江门'},{cityName:'揭阳'},{cityName:'茂名'},{cityName:'梅州'},{cityName:'清远'},{cityName:'汕头'},{cityName:'汕尾'},{cityName:'韶关'},{cityName:'阳江'},{cityName:'云浮'},{cityName:'湛江'},{cityName:'肇庆'},{cityName:'中山'},{cityName:'珠海'}]},
+				{provinceName:'广西',citys:[{cityName:'南宁'},{cityName:'桂林'},{cityName:'百色'},{cityName:'北海'},{cityName:'崇左'},{cityName:'防城港'},{cityName:'贵港'},{cityName:'河池'},{cityName:'贺州'},{cityName:'来宾'},{cityName:'柳州'},{cityName:'钦州'},{cityName:'梧州'},{cityName:'玉林'}]},
+				{provinceName:'贵州',citys:[{cityName:'贵阳'},{cityName:'安顺'},{cityName:'毕节'},{cityName:'六盘水'},{cityName:'黔东南'},{cityName:'黔南'},{cityName:'黔西南'},{cityName:'铜仁'},{cityName:'遵义'}]},
+				{provinceName:'海南',citys:[{cityName:'海口'},{cityName:'三亚'},{cityName:'白沙'},{cityName:'保亭'},{cityName:'昌江'},{cityName:'澄迈县'},{cityName:'定安县'},{cityName:'东方'},{cityName:'乐东'},{cityName:'临高县'},{cityName:'陵水'},{cityName:'琼海'},{cityName:'琼中'},{cityName:'屯昌县'},{cityName:'万宁'},{cityName:'文昌'},{cityName:'五指山'},{cityName:'儋州'}]},
+				{provinceName:'河北',citys:[{cityName:'石家庄'},{cityName:'保定'},{cityName:'沧州'},{cityName:'承德'},{cityName:'邯郸'},{cityName:'衡水'},{cityName:'廊坊'},{cityName:'秦皇岛'},{cityName:'唐山'},{cityName:'邢台'},{cityName:'张家口'}]},
+				{provinceName:'河南',citys:[{cityName:'郑州'},{cityName:'洛阳'},{cityName:'开封'},{cityName:'安阳'},{cityName:'鹤壁'},{cityName:'济源'},{cityName:'焦作'},{cityName:'南阳'},{cityName:'平顶山'},{cityName:'三门峡'},{cityName:'商丘'},{cityName:'新乡'},{cityName:'信阳'},{cityName:'许昌'},{cityName:'周口'},{cityName:'驻马店'},{cityName:'漯河'},{cityName:'濮阳'}]},
+				{provinceName:'黑龙江',citys:[{cityName:'哈尔滨'},{cityName:'大庆'},{cityName:'大兴安岭'},{cityName:'鹤岗'},{cityName:'黑河'},{cityName:'鸡西'},{cityName:'佳木斯'},{cityName:'牡丹江'},{cityName:'七台河'},{cityName:'齐齐哈尔'},{cityName:'双鸭山'},{cityName:'绥化'},{cityName:'伊春'}]},
+				{provinceName:'湖北',citys:[{cityName:'武汉'},{cityName:'仙桃'},{cityName:'鄂州'},{cityName:'黄冈'},{cityName:'黄石'},{cityName:'荆门'},{cityName:'荆州'},{cityName:'潜江'},{cityName:'神农架林区'},{cityName:'十堰'},{cityName:'随州'},{cityName:'天门'},{cityName:'咸宁'},{cityName:'襄樊'},{cityName:'孝感'},{cityName:'宜昌'},{cityName:'恩施'}]},
+				{provinceName:'湖南',citys:[{cityName:'长沙'},{cityName:'张家界'},{cityName:'常德'},{cityName:'郴州'},{cityName:'衡阳'},{cityName:'怀化'},{cityName:'娄底'},{cityName:'邵阳'},{cityName:'湘潭'},{cityName:'湘西'},{cityName:'益阳'},{cityName:'永州'},{cityName:'岳阳'},{cityName:'株洲'}]},
+				{provinceName:'吉林',citys:[{cityName:'长春'},{cityName:'吉林'},{cityName:'白城'},{cityName:'白山'},{cityName:'辽源'},{cityName:'四平'},{cityName:'松原'},{cityName:'通化'},{cityName:'延边'}]},
+				{provinceName:'江苏',citys:[{cityName:'南京'},{cityName:'苏州'},{cityName:'无锡'},{cityName:'常州'},{cityName:'淮安'},{cityName:'连云港'},{cityName:'南通'},{cityName:'宿迁'},{cityName:'泰州'},{cityName:'徐州'},{cityName:'盐城'},{cityName:'扬州'},{cityName:'镇江'}]},
+				{provinceName:'江西',citys:[{cityName:'南昌'},{cityName:'抚州'},{cityName:'赣州'},{cityName:'吉安'},{cityName:'景德镇'},{cityName:'九江'},{cityName:'萍乡'},{cityName:'上饶'},{cityName:'新余'},{cityName:'宜春'},{cityName:'鹰潭'}]},
+				{provinceName:'辽宁',citys:[{cityName:'沈阳'},{cityName:'大连'},{cityName:'鞍山'},{cityName:'本溪'},{cityName:'朝阳'},{cityName:'丹东'},{cityName:'抚顺'},{cityName:'阜新'},{cityName:'葫芦岛'},{cityName:'锦州'},{cityName:'辽阳'},{cityName:'盘锦'},{cityName:'铁岭'},{cityName:'营口'}]},
+				{provinceName:'内蒙古',citys:[{cityName:'呼和浩特'},{cityName:'阿拉善盟'},{cityName:'巴彦淖尔盟'},{cityName:'包头'},{cityName:'赤峰'},{cityName:'鄂尔多斯'},{cityName:'呼伦贝尔'},{cityName:'通辽'},{cityName:'乌海'},{cityName:'乌兰察布市'},{cityName:'锡林郭勒盟'},{cityName:'兴安盟'}]},
+				{provinceName:'宁夏',citys:[{cityName:'银川'},{cityName:'固原'},{cityName:'石嘴山'},{cityName:'吴忠'},{cityName:'中卫'}]},
+				{provinceName:'青海',citys:[{cityName:'西宁'},{cityName:'果洛'},{cityName:'海北'},{cityName:'海东'},{cityName:'海南'},{cityName:'海西'},{cityName:'黄南'},{cityName:'玉树'}]},
+				{provinceName:'山东',citys:[{cityName:'济南'},{cityName:'青岛'},{cityName:'滨州'},{cityName:'德州'},{cityName:'东营'},{cityName:'菏泽'},{cityName:'济宁'},{cityName:'莱芜'},{cityName:'聊城'},{cityName:'临沂'},{cityName:'日照'},{cityName:'泰安'},{cityName:'威海'},{cityName:'潍坊'},{cityName:'烟台'},{cityName:'枣庄'},{cityName:'淄博'}]},
+				{provinceName:'山西',citys:[{cityName:'太原'},{cityName:'长治'},{cityName:'大同'},{cityName:'晋城'},{cityName:'晋中'},{cityName:'临汾'},{cityName:'吕梁'},{cityName:'朔州'},{cityName:'忻州'},{cityName:'阳泉'},{cityName:'运城'}]},
+				{provinceName:'陕西',citys:[{cityName:'西安'},{cityName:'安康'},{cityName:'宝鸡'},{cityName:'汉中'},{cityName:'商洛'},{cityName:'铜川'},{cityName:'渭南'},{cityName:'咸阳'},{cityName:'延安'},{cityName:'榆林'}]},
+				{provinceName:'上海',citys:[{cityName:'上海'}]},
+				{provinceName:'四川',citys:[{cityName:'成都'},{cityName:'绵阳'},{cityName:'阿坝'},{cityName:'巴中'},{cityName:'达州'},{cityName:'德阳'},{cityName:'甘孜'},{cityName:'广安'},{cityName:'广元'},{cityName:'乐山'},{cityName:'凉山'},{cityName:'眉山'},{cityName:'南充'},{cityName:'内江'},{cityName:'攀枝花'},{cityName:'遂宁'},{cityName:'雅安'},{cityName:'宜宾'},{cityName:'资阳'},{cityName:'自贡'},{cityName:'泸州'}]},
+				{provinceName:'天津',citys:[{cityName:'天津'}]},
+				{provinceName:'西藏',citys:[{cityName:'拉萨'},{cityName:'阿里'},{cityName:'昌都'},{cityName:'林芝'},{cityName:'那曲'},{cityName:'日喀则'},{cityName:'山南'}]},
+				{provinceName:'新疆',citys:[{cityName:'乌鲁木齐'},{cityName:'阿克苏'},{cityName:'阿拉尔'},{cityName:'巴音郭楞'},{cityName:'博尔塔拉'},{cityName:'昌吉'},{cityName:'哈密'},{cityName:'和田'},{cityName:'喀什'},{cityName:'克拉玛依'},{cityName:'克孜勒苏'},{cityName:'石河子'},{cityName:'图木舒克'},{cityName:'吐鲁番'},{cityName:'五家渠'},{cityName:'伊犁'}]},
+				{provinceName:'云南',citys:[{cityName:'昆明'},{cityName:'怒江'},{cityName:'普洱'},{cityName:'丽江'},{cityName:'保山'},{cityName:'楚雄'},{cityName:'大理'},{cityName:'德宏'},{cityName:'迪庆'},{cityName:'红河'},{cityName:'临沧'},{cityName:'曲靖'},{cityName:'文山'},{cityName:'西双版纳'},{cityName:'玉溪'},{cityName:'昭通'}]},
+				{provinceName:'浙江',citys:[{cityName:'杭州'},{cityName:'湖州'},{cityName:'嘉兴'},{cityName:'金华'},{cityName:'丽水'},{cityName:'宁波'},{cityName:'绍兴'},{cityName:'台州'},{cityName:'温州'},{cityName:'舟山'},{cityName:'衢州'}]},
+				{provinceName:'重庆',citys:[{cityName:'重庆'}]},
+				{provinceName:'香港',citys:[{cityName:'香港'}]},
+				{provinceName:'澳门',citys:[{cityName:'澳门'}]},
+				{provinceName:'台湾',citys:[{cityName:'台湾'}]}];
+
+
+
+
+
+
